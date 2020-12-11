@@ -59,6 +59,7 @@
             this.btnVer_pte_Correos = new FontAwesome.Sharp.IconButton();
             this.label7 = new System.Windows.Forms.Label();
             this.dtpfecha = new System.Windows.Forms.DateTimePicker();
+            this.Btn_Actualizadb = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCorreos_Pendientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btnbuscar)).BeginInit();
@@ -169,7 +170,7 @@
             this.TxtDestinatario_Correo.Location = new System.Drawing.Point(24, 446);
             this.TxtDestinatario_Correo.Multiline = true;
             this.TxtDestinatario_Correo.Name = "TxtDestinatario_Correo";
-            this.TxtDestinatario_Correo.Size = new System.Drawing.Size(290, 55);
+            this.TxtDestinatario_Correo.Size = new System.Drawing.Size(290, 76);
             this.TxtDestinatario_Correo.TabIndex = 255;
             // 
             // label2
@@ -280,7 +281,7 @@
             this.TxtCorreo_Gic.Location = new System.Drawing.Point(351, 443);
             this.TxtCorreo_Gic.Multiline = true;
             this.TxtCorreo_Gic.Name = "TxtCorreo_Gic";
-            this.TxtCorreo_Gic.Size = new System.Drawing.Size(298, 58);
+            this.TxtCorreo_Gic.Size = new System.Drawing.Size(298, 79);
             this.TxtCorreo_Gic.TabIndex = 269;
             // 
             // label5
@@ -304,11 +305,11 @@
             this.btnDescargar_Excel.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnDescargar_Excel.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
             this.btnDescargar_Excel.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnDescargar_Excel.IconSize = 19;
+            this.btnDescargar_Excel.IconSize = 25;
             this.btnDescargar_Excel.Location = new System.Drawing.Point(938, 82);
             this.btnDescargar_Excel.Name = "btnDescargar_Excel";
             this.btnDescargar_Excel.Rotation = 0D;
-            this.btnDescargar_Excel.Size = new System.Drawing.Size(137, 36);
+            this.btnDescargar_Excel.Size = new System.Drawing.Size(137, 52);
             this.btnDescargar_Excel.TabIndex = 274;
             this.btnDescargar_Excel.Text = "Exp. Excel";
             this.btnDescargar_Excel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -325,11 +326,11 @@
             this.btnEnviar_Correo.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnEnviar_Correo.IconChar = FontAwesome.Sharp.IconChar.MailBulk;
             this.btnEnviar_Correo.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnEnviar_Correo.IconSize = 19;
-            this.btnEnviar_Correo.Location = new System.Drawing.Point(938, 135);
+            this.btnEnviar_Correo.IconSize = 25;
+            this.btnEnviar_Correo.Location = new System.Drawing.Point(938, 172);
             this.btnEnviar_Correo.Name = "btnEnviar_Correo";
             this.btnEnviar_Correo.Rotation = 0D;
-            this.btnEnviar_Correo.Size = new System.Drawing.Size(137, 36);
+            this.btnEnviar_Correo.Size = new System.Drawing.Size(137, 52);
             this.btnEnviar_Correo.TabIndex = 276;
             this.btnEnviar_Correo.Text = "Enviar Correo";
             this.btnEnviar_Correo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -340,6 +341,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.Gainsboro;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.Btn_Actualizadb);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.btnEnviar_Correo);
@@ -365,9 +367,9 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(84)))));
             this.label8.Location = new System.Drawing.Point(553, 8);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(119, 16);
+            this.label8.Size = new System.Drawing.Size(106, 16);
             this.label8.TabIndex = 281;
-            this.label8.Text = "Nombre Archivo";
+            this.label8.Text = "Asunto Correo";
             // 
             // label6
             // 
@@ -433,6 +435,27 @@
             this.dtpfecha.Name = "dtpfecha";
             this.dtpfecha.Size = new System.Drawing.Size(114, 27);
             this.dtpfecha.TabIndex = 279;
+            // 
+            // Btn_Actualizadb
+            // 
+            this.Btn_Actualizadb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(84)))));
+            this.Btn_Actualizadb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Actualizadb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Actualizadb.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.Btn_Actualizadb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Actualizadb.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Btn_Actualizadb.IconChar = FontAwesome.Sharp.IconChar.MailBulk;
+            this.Btn_Actualizadb.IconColor = System.Drawing.Color.Gainsboro;
+            this.Btn_Actualizadb.IconSize = 25;
+            this.Btn_Actualizadb.Location = new System.Drawing.Point(938, 274);
+            this.Btn_Actualizadb.Name = "Btn_Actualizadb";
+            this.Btn_Actualizadb.Rotation = 0D;
+            this.Btn_Actualizadb.Size = new System.Drawing.Size(137, 52);
+            this.Btn_Actualizadb.TabIndex = 282;
+            this.Btn_Actualizadb.Text = "Actualizar Base";
+            this.Btn_Actualizadb.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Btn_Actualizadb.UseVisualStyleBackColor = false;
+            this.Btn_Actualizadb.Click += new System.EventHandler(this.Btn_Actualizadb_Click);
             // 
             // FormEnvio_Correos
             // 
@@ -500,5 +523,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dtpfecha;
         private System.Windows.Forms.Label label8;
+        private FontAwesome.Sharp.IconButton Btn_Actualizadb;
     }
 }

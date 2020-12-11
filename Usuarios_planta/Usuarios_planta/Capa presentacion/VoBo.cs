@@ -81,8 +81,7 @@ namespace Usuarios_planta
 
         public void hideSubMenu()
         {
-            panelCheques.Visible = false;
-            panelinformes.Visible = false;                       
+            panelCheques.Visible = false;                               
         }
 
         public void showSubMenu(Panel subMenu)
@@ -133,12 +132,7 @@ namespace Usuarios_planta
             this.panelContenedor.Tag = fh;
             fh.Show();
         }
-
-        private void BtnInformes_Click(object sender, EventArgs e)
-        {
-            showSubMenu(panelinformes);
-        }
-
+               
         private void BtnInformes_MouseHover(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);            
@@ -211,6 +205,12 @@ namespace Usuarios_planta
         private void Btn_Notificacion_Click(object sender, EventArgs e)
         {
             Form formulario = new FormEnvio_Correos();
+            formulario.Show();
+        }
+
+        private void BtnEstado_Operaciones_Click(object sender, EventArgs e)
+        {
+            Form formulario = new FormEstado_Operaciones();
             formulario.Show();
         }
     }

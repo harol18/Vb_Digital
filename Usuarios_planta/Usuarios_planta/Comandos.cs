@@ -15,10 +15,7 @@ namespace Usuarios_planta
 {
     class Comandos
     {
-
-        MySqlConnection con = new MySqlConnection("server=;Uid=;password=;database=dblibranza;port=3306;persistsecurityinfo=True;");
-        
-
+        MySqlConnection con = new MySqlConnection("server=82.2.121.99;Uid=userapp;password=userapp;database=dblibranza;port=3306;persistsecurityinfo=True;");
 
         public void Guardar_vobo(TextBox TxtRadicado, TextBox TxtCedula_Cliente, TextBox TxtNombre_Cliente, TextBox TxtScoring, ComboBox cmbFuerza_Venta, TextBox TxtCodigo_Convenio,ComboBox cmbDirigido, TextBox TxtCod_Matriz, TextBox TxtConsecutivo, 
                                  ComboBox cmbGrado, TextBox TxtCod_Militar1, TextBox TxtCod_Militar2, ComboBox cmbDestino, TextBox TxtSubproducto, TextBox TxtTasa_E_A, TextBox TxtTasa_N_M, 
@@ -291,6 +288,30 @@ namespace Usuarios_planta
                 MessageBox.Show("Conexion cerrada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public void Estado_Operaciones(DataGridView dgvDatos, ComboBox cmbEstado_Operacion)
+        {
+            try
+            {
+                con.Open();
+                DataTable dt = new DataTable();
+                MySqlCommand cmd = new MySqlCommand("estado_operaciones", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@_Estado_Operacion", cmbEstado_Operacion.Text);
+                cmd.Parameters.AddWithValue("@_Nombre_Funcionario", usuario.Nombre);
+                MySqlDataAdapter registro = new MySqlDataAdapter(cmd);
+                registro.Fill(dt);
+                dgvDatos.DataSource = dt;
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("", ex.ToString());
+                con.Close();
+                MessageBox.Show("Conexion cerrada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public void Pendiente_correo3(Label lblfecha, Label lblanterior)
         {
             try
@@ -316,6 +337,29 @@ namespace Usuarios_planta
             catch (Exception ex)
             {
                 MessageBox.Show("Consecutivo no existe", ex.ToString());
+                con.Close();
+                MessageBox.Show("Conexion cerrada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void Pendiente_correo4(DataGridView dgvCorreos_Pendientes, Label lblfecha)
+        {
+            try
+            {
+                con.Open();
+                DataTable dt = new DataTable();
+                MySqlCommand cmd = new MySqlCommand("pendiente_correo", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@_Fecha_Envio", lblfecha.Text);
+                cmd.Parameters.AddWithValue("@_Nombre_Funcionario", usuario.Nombre);
+                MySqlDataAdapter registro = new MySqlDataAdapter(cmd);
+                registro.Fill(dt);
+                dgvCorreos_Pendientes.DataSource = dt;
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("", ex.ToString());
                 con.Close();
                 MessageBox.Show("Conexion cerrada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

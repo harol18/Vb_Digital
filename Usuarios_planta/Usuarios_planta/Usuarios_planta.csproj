@@ -103,6 +103,12 @@
     <Compile Include="FormEnvio_Correos.Designer.cs">
       <DependentUpon>FormEnvio_Correos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEstado_Operaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEstado_Operaciones.Designer.cs">
+      <DependentUpon>FormEstado_Operaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formulario_Captura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormEnvio_Correos.resx">
       <DependentUpon>FormEnvio_Correos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEstado_Operaciones.resx">
+      <DependentUpon>FormEstado_Operaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario_Captura.resx">
       <DependentUpon>Formulario_Captura.cs</DependentUpon>

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.TxtCartera4 = new System.Windows.Forms.TextBox();
             this.btnAñadir_cartera = new System.Windows.Forms.PictureBox();
@@ -117,11 +119,11 @@
             this.dtpFecha_Restriccion = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblanterior = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.btnAbrir_Correos = new FontAwesome.Sharp.IconButton();
-            this.label15 = new System.Windows.Forms.Label();
             this.lbltotal = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label39 = new System.Windows.Forms.Label();
             this.btnMatriz = new System.Windows.Forms.Button();
@@ -138,6 +140,9 @@
             this.lblfecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.dgvCorreos_Pendientes = new System.Windows.Forms.DataGridView();
+            this.label33 = new System.Windows.Forms.Label();
+            this.BtnEstado_Operaciones = new System.Windows.Forms.Button();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAñadir_cartera)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -152,6 +157,7 @@
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epError)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCorreos_Pendientes)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox4
@@ -521,10 +527,7 @@
             this.cmbGrado.Font = new System.Drawing.Font("Segoe UI Emoji", 11.25F);
             this.cmbGrado.FormattingEnabled = true;
             this.cmbGrado.Items.AddRange(new object[] {
-            "Grado 1",
-            "Grado 2",
-            "Grado 3",
-            "Grado 4"});
+            "Sld"});
             this.cmbGrado.Location = new System.Drawing.Point(142, 106);
             this.cmbGrado.Name = "cmbGrado";
             this.cmbGrado.Size = new System.Drawing.Size(149, 28);
@@ -1079,6 +1082,7 @@
             "Aprobado",
             "Negado",
             "Suspendido",
+            "Devuelto",
             "Devuelto 1",
             "Devuelto 2",
             "Devuelto 3",
@@ -1276,14 +1280,11 @@
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.lblanterior);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.btnAbrir_Correos);
             this.panel2.Controls.Add(this.label15);
-            this.panel2.Controls.Add(this.lbltotal);
             this.panel2.Controls.Add(this.label38);
-            this.panel2.Location = new System.Drawing.Point(967, 508);
+            this.panel2.Location = new System.Drawing.Point(967, 462);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(384, 154);
+            this.panel2.Size = new System.Drawing.Size(384, 89);
             this.panel2.TabIndex = 274;
             // 
             // lblanterior
@@ -1291,63 +1292,21 @@
             this.lblanterior.AutoSize = true;
             this.lblanterior.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblanterior.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(84)))));
-            this.lblanterior.Location = new System.Drawing.Point(163, 107);
+            this.lblanterior.Location = new System.Drawing.Point(167, 53);
             this.lblanterior.Name = "lblanterior";
             this.lblanterior.Size = new System.Drawing.Size(0, 20);
             this.lblanterior.TabIndex = 282;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(84)))));
-            this.label10.Location = new System.Drawing.Point(7, 55);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(37, 20);
-            this.label10.TabIndex = 280;
-            this.label10.Text = "Hoy";
-            // 
-            // btnAbrir_Correos
-            // 
-            this.btnAbrir_Correos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(84)))));
-            this.btnAbrir_Correos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAbrir_Correos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAbrir_Correos.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnAbrir_Correos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbrir_Correos.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnAbrir_Correos.IconChar = FontAwesome.Sharp.IconChar.Eye;
-            this.btnAbrir_Correos.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnAbrir_Correos.IconSize = 19;
-            this.btnAbrir_Correos.Location = new System.Drawing.Point(212, 63);
-            this.btnAbrir_Correos.Name = "btnAbrir_Correos";
-            this.btnAbrir_Correos.Rotation = 0D;
-            this.btnAbrir_Correos.Size = new System.Drawing.Size(70, 27);
-            this.btnAbrir_Correos.TabIndex = 279;
-            this.btnAbrir_Correos.Text = "Ver";
-            this.btnAbrir_Correos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAbrir_Correos.UseVisualStyleBackColor = false;
-            this.btnAbrir_Correos.Click += new System.EventHandler(this.btnAbrir_Correos_Click);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(84)))));
-            this.label15.Location = new System.Drawing.Point(7, 107);
+            this.label15.Location = new System.Drawing.Point(11, 53);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(139, 20);
             this.label15.TabIndex = 281;
             this.label15.Text = "Fechas Anteriores";
-            // 
-            // lbltotal
-            // 
-            this.lbltotal.AutoSize = true;
-            this.lbltotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbltotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(84)))));
-            this.lbltotal.Location = new System.Drawing.Point(71, 55);
-            this.lbltotal.Name = "lbltotal";
-            this.lbltotal.Size = new System.Drawing.Size(0, 20);
-            this.lbltotal.TabIndex = 250;
             // 
             // label38
             // 
@@ -1360,6 +1319,48 @@
             this.label38.TabIndex = 248;
             this.label38.Text = "Pendientes envio al convenio";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(84)))));
+            this.label10.Location = new System.Drawing.Point(972, 560);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(40, 20);
+            this.label10.TabIndex = 280;
+            this.label10.Text = "Hoy";
+            // 
+            // btnAbrir_Correos
+            // 
+            this.btnAbrir_Correos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(84)))));
+            this.btnAbrir_Correos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAbrir_Correos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAbrir_Correos.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnAbrir_Correos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbrir_Correos.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnAbrir_Correos.IconChar = FontAwesome.Sharp.IconChar.MailBulk;
+            this.btnAbrir_Correos.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnAbrir_Correos.IconSize = 22;
+            this.btnAbrir_Correos.Location = new System.Drawing.Point(1041, 807);
+            this.btnAbrir_Correos.Name = "btnAbrir_Correos";
+            this.btnAbrir_Correos.Rotation = 0D;
+            this.btnAbrir_Correos.Size = new System.Drawing.Size(149, 36);
+            this.btnAbrir_Correos.TabIndex = 279;
+            this.btnAbrir_Correos.Text = "Remitir correo";
+            this.btnAbrir_Correos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAbrir_Correos.UseVisualStyleBackColor = false;
+            this.btnAbrir_Correos.Click += new System.EventHandler(this.btnAbrir_Correos_Click);
+            // 
+            // lbltotal
+            // 
+            this.lbltotal.AutoSize = true;
+            this.lbltotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbltotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(84)))));
+            this.lbltotal.Location = new System.Drawing.Point(1036, 560);
+            this.lbltotal.Name = "lbltotal";
+            this.lbltotal.Size = new System.Drawing.Size(0, 20);
+            this.lbltotal.TabIndex = 250;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label39);
@@ -1371,16 +1372,16 @@
             this.panel1.Controls.Add(this.TxtRestriccionmt);
             this.panel1.Controls.Add(this.label31);
             this.panel1.Controls.Add(this.label30);
-            this.panel1.Location = new System.Drawing.Point(967, 44);
+            this.panel1.Location = new System.Drawing.Point(967, 31);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(398, 441);
+            this.panel1.Size = new System.Drawing.Size(398, 359);
             this.panel1.TabIndex = 273;
             // 
             // label39
             // 
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(14, 358);
+            this.label39.Location = new System.Drawing.Point(14, 301);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(234, 18);
             this.label39.TabIndex = 262;
@@ -1393,7 +1394,7 @@
             this.btnMatriz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMatriz.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMatriz.ForeColor = System.Drawing.Color.White;
-            this.btnMatriz.Location = new System.Drawing.Point(13, 393);
+            this.btnMatriz.Location = new System.Drawing.Point(13, 325);
             this.btnMatriz.Name = "btnMatriz";
             this.btnMatriz.Size = new System.Drawing.Size(87, 27);
             this.btnMatriz.TabIndex = 261;
@@ -1405,7 +1406,7 @@
             // 
             this.label48.AutoSize = true;
             this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label48.Location = new System.Drawing.Point(14, 220);
+            this.label48.Location = new System.Drawing.Point(14, 174);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(147, 16);
             this.label48.TabIndex = 260;
@@ -1416,7 +1417,7 @@
             this.Txt_Horarios_gestionmt.BackColor = System.Drawing.SystemColors.Menu;
             this.Txt_Horarios_gestionmt.Enabled = false;
             this.Txt_Horarios_gestionmt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Horarios_gestionmt.Location = new System.Drawing.Point(13, 239);
+            this.Txt_Horarios_gestionmt.Location = new System.Drawing.Point(13, 193);
             this.Txt_Horarios_gestionmt.MaxLength = 100;
             this.Txt_Horarios_gestionmt.Multiline = true;
             this.Txt_Horarios_gestionmt.Name = "Txt_Horarios_gestionmt";
@@ -1428,7 +1429,7 @@
             this.TxtNombre_Conveniomt.BackColor = System.Drawing.SystemColors.Menu;
             this.TxtNombre_Conveniomt.Enabled = false;
             this.TxtNombre_Conveniomt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNombre_Conveniomt.Location = new System.Drawing.Point(13, 84);
+            this.TxtNombre_Conveniomt.Location = new System.Drawing.Point(13, 62);
             this.TxtNombre_Conveniomt.MaxLength = 100;
             this.TxtNombre_Conveniomt.Multiline = true;
             this.TxtNombre_Conveniomt.Name = "TxtNombre_Conveniomt";
@@ -1440,7 +1441,7 @@
             // 
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label41.Location = new System.Drawing.Point(10, 135);
+            this.label41.Location = new System.Drawing.Point(10, 101);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(86, 16);
             this.label41.TabIndex = 251;
@@ -1451,7 +1452,7 @@
             this.TxtRestriccionmt.BackColor = System.Drawing.SystemColors.Menu;
             this.TxtRestriccionmt.Enabled = false;
             this.TxtRestriccionmt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtRestriccionmt.Location = new System.Drawing.Point(13, 154);
+            this.TxtRestriccionmt.Location = new System.Drawing.Point(13, 120);
             this.TxtRestriccionmt.MaxLength = 100;
             this.TxtRestriccionmt.Multiline = true;
             this.TxtRestriccionmt.Name = "TxtRestriccionmt";
@@ -1463,7 +1464,7 @@
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(10, 65);
+            this.label31.Location = new System.Drawing.Point(10, 43);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(132, 16);
             this.label31.TabIndex = 248;
@@ -1474,7 +1475,7 @@
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(84)))));
-            this.label30.Location = new System.Drawing.Point(160, 8);
+            this.label30.Location = new System.Drawing.Point(160, 11);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(214, 24);
             this.label30.TabIndex = 247;
@@ -1537,15 +1538,78 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // dgvCorreos_Pendientes
+            // 
+            this.dgvCorreos_Pendientes.AllowUserToAddRows = false;
+            this.dgvCorreos_Pendientes.BackgroundColor = System.Drawing.Color.White;
+            this.dgvCorreos_Pendientes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvCorreos_Pendientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCorreos_Pendientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvCorreos_Pendientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCorreos_Pendientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCorreos_Pendientes.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvCorreos_Pendientes.Location = new System.Drawing.Point(976, 586);
+            this.dgvCorreos_Pendientes.Name = "dgvCorreos_Pendientes";
+            this.dgvCorreos_Pendientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.dgvCorreos_Pendientes.RowHeadersVisible = false;
+            this.dgvCorreos_Pendientes.Size = new System.Drawing.Size(214, 215);
+            this.dgvCorreos_Pendientes.TabIndex = 281;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(84)))));
+            this.label33.Location = new System.Drawing.Point(972, 415);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(172, 20);
+            this.label33.TabIndex = 282;
+            this.label33.Text = "Estado Operaciones";
+            // 
+            // BtnEstado_Operaciones
+            // 
+            this.BtnEstado_Operaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(84)))));
+            this.BtnEstado_Operaciones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnEstado_Operaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEstado_Operaciones.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEstado_Operaciones.ForeColor = System.Drawing.Color.White;
+            this.BtnEstado_Operaciones.Location = new System.Drawing.Point(1150, 413);
+            this.BtnEstado_Operaciones.Name = "BtnEstado_Operaciones";
+            this.BtnEstado_Operaciones.Size = new System.Drawing.Size(74, 27);
+            this.BtnEstado_Operaciones.TabIndex = 283;
+            this.BtnEstado_Operaciones.Text = "Ver";
+            this.BtnEstado_Operaciones.UseVisualStyleBackColor = false;
+            this.BtnEstado_Operaciones.Click += new System.EventHandler(this.BtnEstado_Operaciones_Click);
+            // 
             // Formulario_Captura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1438, 870);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.BtnEstado_Operaciones);
+            this.Controls.Add(this.label33);
+            this.Controls.Add(this.dgvCorreos_Pendientes);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.lblHora);
+            this.Controls.Add(this.lbltotal);
             this.Controls.Add(this.lblfecha);
+            this.Controls.Add(this.btnAbrir_Correos);
             this.Controls.Add(this.Btn_Nuevo);
             this.Controls.Add(this.Btn_Guardar);
             this.Controls.Add(this.panel2);
@@ -1580,6 +1644,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epError)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCorreos_Pendientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1696,5 +1761,8 @@
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.TextBox TxtCod_Matriz;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dgvCorreos_Pendientes;
+        private System.Windows.Forms.Button BtnEstado_Operaciones;
+        private System.Windows.Forms.Label label33;
     }
 }

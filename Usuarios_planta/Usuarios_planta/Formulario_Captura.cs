@@ -13,8 +13,8 @@ using System.Configuration;
 namespace Usuarios_planta
 {
     public partial class Formulario_Captura : Form
-    {        
-        MySqlConnection con = new MySqlConnection("server=;Uid=;password=;database=dblibranza;port=3306;persistsecurityinfo=True;");
+    {
+        MySqlConnection con = new MySqlConnection("server=82.2.121.99;Uid=userapp;password=userapp;database=dblibranza;port=3306;persistsecurityinfo=True;");
 
         Comandos cmds = new Comandos();
         Conversion c = new Conversion();
@@ -167,6 +167,7 @@ namespace Usuarios_planta
 
             try
             {
+               cmds.Pendiente_correo4(dgvCorreos_Pendientes, lblfecha);
                cmds.Pendiente_correo2(lblfecha,lbltotal);
                cmds.Pendiente_correo3(lblfecha, lblanterior);
             }
@@ -280,12 +281,10 @@ namespace Usuarios_planta
 
             if (Convert.ToInt32(length) < 20)
             {
-                MessageBox.Show("Numero de scoring no cuenta con los 20 digitos correspondientes !! por favor revisar");
-                TxtScoring.Focus();
+                MessageBox.Show("Numero de scoring no cuenta con los 20 digitos correspondientes !! por favor revisar");                
             }
         }
         
-
         private void TxtCodigo_Convenio_Validated(object sender, EventArgs e)
         {
             string cadena = TxtCodigo_Convenio.Text;
@@ -302,80 +301,7 @@ namespace Usuarios_planta
                 cmbGrado.Enabled = false;
                 TxtCod_Militar1.Enabled = false;
                 TxtCod_Militar2.Enabled = false;
-            }
-            //if (codigo_convenio == "DHL")
-            //{
-            //    cmbDirigido.Items.AddRange(new object[] {
-            //"Express",
-            //"Aduanas",
-            //"Forwarding",
-            //"Supply",
-            //"Zona Franca",
-            //});
-            //}
-            //else if (codigo_convenio == "INP")
-            //{
-            //    cmbDirigido.Items.AddRange(new object[] {
-            //"Bogotá",
-            //});
-            //}
-            //else if (codigo_convenio == "SNA")
-            //{
-            //    cmbDirigido.Items.AddRange(new object[] {
-            //"General",
-            //"Distrito Capital",
-            //"Cundinamarca",
-            //"Nariño",
-            //});
-            //}
-            //else if (codigo_convenio == "INP")
-            //{
-            //    cmbDirigido.Items.AddRange(new object[] {
-            //"Bogotá",
-            //});
-            //}
-            //else if (codigo_convenio == "INP")
-            //{
-            //    cmbDirigido.Items.AddRange(new object[] {
-            //"Bogotá",
-            //});
-            //}
-            //else if (codigo_convenio == "INP")
-            //{
-            //    cmbDirigido.Items.AddRange(new object[] {
-            //"Bogotá",
-            //});
-            //}
-            //else if (codigo_convenio == "APA")
-            //{
-            //    cmbDirigido.Items.AddRange(new object[] {
-            //"Administrativo",
-            //"Pensionados",
-            //});
-
-            //}
-            //else if (codigo_convenio == "DDM")
-            //{
-            //    cmbDirigido.Items.AddRange(new object[] {
-            //"Administrativo",
-            //"Pensionados",
-            //});
-
-            //}
-            //else if (codigo_convenio == "DDM")
-            //{
-            //    cmbDirigido.Items.AddRange(new object[] {
-            //"Administrativo",
-            //"Pensionados",
-            //});
-
-            //}
-            //else
-            //{
-            //    cmbDirigido.Items.AddRange(new object[] {
-            //"No aplica",
-            //});
-            //}
+            }          
         }
         private void TxtMonto_Aprobado_TextChanged(object sender, EventArgs e)
         {
@@ -431,6 +357,10 @@ namespace Usuarios_planta
             else if (cmbEstado_Operacion.Text == "Devuelto 3")
             {
                 TxtComentarios.Text = fecha.ToString("dd/MM/yyyy") + " Se realiza devolución ya que al ingresar a la plataforma Sygnus esta indica que el afiliado debe actualizar sus datos personales. Realizar proceso de actualización con el cliente y reactivar operación. " + extrae_codfuncionario;
+            }
+            else if (cmbEstado_Operacion.Text == "Devuelto")
+            {
+                TxtComentarios.Text = fecha.ToString("dd/MM/yyyy") + " Se realiza devolución por " + extrae_codfuncionario;
             }
         }
 
@@ -838,10 +768,17 @@ namespace Usuarios_planta
             if (TxtCodigo_Convenio.Text!= "")
             {
                 Cargar_dirigido();
-            }else if (TxtCodigo_Convenio.Text == "")
+            }
+            else if (TxtCodigo_Convenio.Text == "")
             {
                 MessageBox.Show("Primero debe digitar codigo del convenio correspondiente","",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }            
+        }
+
+        private void BtnEstado_Operaciones_Click(object sender, EventArgs e)
+        {
+            Form formulario = new FormEstado_Operaciones();
+            formulario.Show();
         }
     }
 }
