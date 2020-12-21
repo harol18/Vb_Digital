@@ -224,7 +224,7 @@ namespace Usuarios_planta
             this.Controls.Add(this.panel3);
             this.Name = "FormEstado_Operaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormEstado_Operaciones";            
+            this.Text = "FormEstado_Operaciones";    
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);

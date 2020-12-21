@@ -14,7 +14,7 @@ namespace Usuarios_planta
 {
     public partial class Formulario_Captura : Form
     {
-        MySqlConnection con = new MySqlConnection("server=82.2.121.99;Uid=userapp;password=userapp;database=dblibranza;port=3306;persistsecurityinfo=True;");
+        MySqlConnection con = new MySqlConnection("server=;Uid=;password=;database=dblibranza;port=3306;persistsecurityinfo=True;");
 
         Comandos cmds = new Comandos();
         Conversion c = new Conversion();
@@ -366,6 +366,15 @@ namespace Usuarios_planta
 
         private void cmbTipologia_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (cmbEstado_Operacion.Text == "Suspendido" && cmbTipologia.Text == "924")
+            {
+                string extrae_codfuncionario;
+                extrae_codfuncionario = usuario.Identificacion.Substring(usuario.Identificacion.Length - 3); // extrae los ultimos 3 digitos del textbox 
+
+                {
+                    TxtComentarios.Text = fecha.ToString("dd/MM/yyyy") + " SEÑOR GESTOR POR FAVOR INDICARLE AL CLIENTE LAS CONDICIONES DE LA APROBACIÓN $" + TxtMonto_Aprobado.Text + " , " + TxtPlazo_Aprobado.Text + " , " + TxtValor_Cuota.Text + " , " + TxtTasa_E_A.Text + " PARA QUE DE ACUERDO A ESTAS CONDICIONES, EL CLIENTE REMITA CORREO SOLICITANDO LA AUTORIZACÓN DEL DESCUENTO ANTE AL PAGADOR, AL BUZON oscar.godoy@contraloria.gov.co y  una vez tenga la respuesta remitir al buzón de gestion.vobodigital@bbva.com.co " + extrae_codfuncionario + " " + cmbTipologia.Text;
+                }
+            }
 
             if (cmbEstado_Operacion.Text == "Suspendido")
             {
@@ -457,10 +466,7 @@ namespace Usuarios_planta
                 {
                     TxtComentarios.Text = fecha.ToString("dd/MM/yyyy") + " Convenio " + TxtCodigo_Convenio.Text + " Destino " + cmbDestino.Text + " solicitud de VoBo enviada a la nómina el día " + dtpFecha_Envio.Text + " tiempo máximo de respuesta superado. " + extrae_codfuncionario + " " + cmbTipologia.Text;
                 }
-                else if (cmbTipologia.Text == "924")
-                {
-                    TxtComentarios.Text = fecha.ToString("dd/MM/yyyy") + " Convenio CGR Destino " + cmbDestino.Text + " caso en espera de correo de aprobacion de la contraloria informo datos del credito scoring " + TxtScoring.Text + " Monto " + TxtMonto_Aprobado.Text + " Plazo " + TxtPlazo_Aprobado.Text + " Meses Cuota " + TxtValor_Cuota.Text + " Recuerde enviar Correo de Visto bueno al buzón oscar.godoy@contraloria.gov.co y una vez tenga la respuesta remitirla al buzón de gestion.vobodigital@bbva.com.co " + extrae_codfuncionario + " " + cmbTipologia.Text;
-                }
+                
                 else if (cmbTipologia.Text == "925")
                 {
                     TxtComentarios.Text = fecha.ToString("dd/MM/yyyy") + " se reporta novedad en herramienta " + extrae_codfuncionario + " " + cmbTipologia.Text;
@@ -489,7 +495,7 @@ namespace Usuarios_planta
                 {
                     TxtComentarios.Text = fecha.ToString("dd/MM/yyyy") + " Para la consecución del VoBo se informa Monto " + TxtMonto_Aprobado.Text + " Plazo " + TxtPlazo_Aprobado.Text + " Meses por un valor de cuota de " + TxtValor_Cuota.Text + " Valor total crédito " + TxtTotal_Credito.Text + " Gracias " + extrae_codfuncionario + " " + cmbTipologia.Text;
                 }
-            }
+            }            
             else
             {
                 MessageBox.Show("Antes de seleccionar una tipologia debe indicar en el estado de la operacion Suspendido");
@@ -779,6 +785,16 @@ namespace Usuarios_planta
         {
             Form formulario = new FormEstado_Operaciones();
             formulario.Show();
+        }
+
+        private void TxtTasa_E_A_Validated(object sender, EventArgs e)
+        {
+            TxtTasa_E_A.Text = TxtTasa_E_A.Text + "%";
+        }
+
+        private void TxtTasa_N_M_Validated(object sender, EventArgs e)
+        {
+            TxtTasa_N_M.Text = TxtTasa_N_M.Text + "%";
         }
     }
 }

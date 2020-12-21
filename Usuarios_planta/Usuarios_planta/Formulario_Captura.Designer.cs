@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.TxtCartera4 = new System.Windows.Forms.TextBox();
             this.btnAñadir_cartera = new System.Windows.Forms.PictureBox();
@@ -404,7 +404,7 @@
             this.pictureBox3.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::Usuarios_planta.Properties.Resources.copy_64px;
-            this.pictureBox3.Location = new System.Drawing.Point(676, 170);
+            this.pictureBox3.Location = new System.Drawing.Point(676, 169);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(25, 25);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -417,7 +417,7 @@
             this.pictureBox2.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::Usuarios_planta.Properties.Resources.copy_64px;
-            this.pictureBox2.Location = new System.Drawing.Point(890, 167);
+            this.pictureBox2.Location = new System.Drawing.Point(890, 168);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(25, 25);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -723,6 +723,7 @@
             this.TxtTasa_E_A.TabIndex = 13;
             this.TxtTasa_E_A.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtTasa_E_A.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TeclaEnter);
+            this.TxtTasa_E_A.Validated += new System.EventHandler(this.TxtTasa_E_A_Validated);
             // 
             // TxtTasa_N_M
             // 
@@ -736,6 +737,7 @@
             this.TxtTasa_N_M.TabIndex = 14;
             this.TxtTasa_N_M.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtTasa_N_M.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TeclaEnter);
+            this.TxtTasa_N_M.Validated += new System.EventHandler(this.TxtTasa_N_M_Validated);
             // 
             // TxtMonto_Letras
             // 
@@ -1421,7 +1423,7 @@
             this.Txt_Horarios_gestionmt.MaxLength = 100;
             this.Txt_Horarios_gestionmt.Multiline = true;
             this.Txt_Horarios_gestionmt.Name = "Txt_Horarios_gestionmt";
-            this.Txt_Horarios_gestionmt.Size = new System.Drawing.Size(361, 102);
+            this.Txt_Horarios_gestionmt.Size = new System.Drawing.Size(385, 102);
             this.Txt_Horarios_gestionmt.TabIndex = 263;
             // 
             // TxtNombre_Conveniomt
@@ -1433,7 +1435,7 @@
             this.TxtNombre_Conveniomt.MaxLength = 100;
             this.TxtNombre_Conveniomt.Multiline = true;
             this.TxtNombre_Conveniomt.Name = "TxtNombre_Conveniomt";
-            this.TxtNombre_Conveniomt.Size = new System.Drawing.Size(361, 34);
+            this.TxtNombre_Conveniomt.Size = new System.Drawing.Size(385, 34);
             this.TxtNombre_Conveniomt.TabIndex = 265;
             this.TxtNombre_Conveniomt.Text = "\r\n";
             // 
@@ -1456,7 +1458,7 @@
             this.TxtRestriccionmt.MaxLength = 100;
             this.TxtRestriccionmt.Multiline = true;
             this.TxtRestriccionmt.Name = "TxtRestriccionmt";
-            this.TxtRestriccionmt.Size = new System.Drawing.Size(361, 49);
+            this.TxtRestriccionmt.Size = new System.Drawing.Size(385, 49);
             this.TxtRestriccionmt.TabIndex = 264;
             this.TxtRestriccionmt.Text = "\r\n";
             // 
@@ -1544,24 +1546,24 @@
             this.dgvCorreos_Pendientes.BackgroundColor = System.Drawing.Color.White;
             this.dgvCorreos_Pendientes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvCorreos_Pendientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCorreos_Pendientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCorreos_Pendientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvCorreos_Pendientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCorreos_Pendientes.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCorreos_Pendientes.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCorreos_Pendientes.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvCorreos_Pendientes.Location = new System.Drawing.Point(976, 586);
             this.dgvCorreos_Pendientes.Name = "dgvCorreos_Pendientes";
             this.dgvCorreos_Pendientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;

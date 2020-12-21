@@ -847,4 +847,3 @@ C:\Users\BBVA\Desktop\Desarrollo c# fabrica\VoBo Pagador\VoBo Digital v2\Usuario
 C:\Users\BBVA\Desktop\Desarrollo c# fabrica\VoBo Pagador\VoBo Digital v2\Usuarios_planta\Usuarios_planta\obj\Release\Usuarios_planta.csproj.CopyComplete
 C:\Users\BBVA\Desktop\Desarrollo c# fabrica\VoBo Pagador\VoBo Digital v2\Usuarios_planta\Usuarios_planta\obj\Release\Usuarios_planta.exe
 C:\Users\BBVA\Desktop\Desarrollo c# fabrica\VoBo Pagador\VoBo Digital v2\Usuarios_planta\Usuarios_planta\obj\Release\Usuarios_planta.pdb
-C:\Users\BBVA\Desktop\Desarrollo c# fabrica\VoBo Pagador\VoBo Digital v2\Usuarios_planta\Usuarios_planta\obj\Release\Usuarios_planta.csprojAssemblyReference.cache

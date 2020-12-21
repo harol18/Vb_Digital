@@ -67,6 +67,7 @@
             this.Txtcontraseña.Location = new System.Drawing.Point(111, 195);
             this.Txtcontraseña.Multiline = true;
             this.Txtcontraseña.Name = "Txtcontraseña";
+            this.Txtcontraseña.PasswordChar = '*';
             this.Txtcontraseña.Size = new System.Drawing.Size(162, 24);
             this.Txtcontraseña.TabIndex = 10;
             this.Txtcontraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -158,6 +159,7 @@
             this.iconButton3.Size = new System.Drawing.Size(18, 20);
             this.iconButton3.TabIndex = 27;
             this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // Login
             // 

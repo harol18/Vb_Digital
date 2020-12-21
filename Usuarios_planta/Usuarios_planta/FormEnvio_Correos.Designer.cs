@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Txtcod_convenio = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.dgvCorreos_Pendientes = new System.Windows.Forms.DataGridView();
@@ -40,7 +40,6 @@
             this.TxtDestinatario_Correo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.TxtAsunto = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.Btnbuscar = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -53,13 +52,15 @@
             this.btnDescargar_Excel = new FontAwesome.Sharp.IconButton();
             this.btnEnviar_Correo = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.Btn_Actualizadb = new FontAwesome.Sharp.IconButton();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.TxtNombre_Archivo = new System.Windows.Forms.TextBox();
             this.btnVer_pte_Correos = new FontAwesome.Sharp.IconButton();
             this.label7 = new System.Windows.Forms.Label();
             this.dtpfecha = new System.Windows.Forms.DateTimePicker();
-            this.Btn_Actualizadb = new FontAwesome.Sharp.IconButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.TtxCopia_correo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCorreos_Pendientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btnbuscar)).BeginInit();
@@ -74,7 +75,7 @@
             this.Txtcod_convenio.Location = new System.Drawing.Point(15, 27);
             this.Txtcod_convenio.Multiline = true;
             this.Txtcod_convenio.Name = "Txtcod_convenio";
-            this.Txtcod_convenio.Size = new System.Drawing.Size(133, 28);
+            this.Txtcod_convenio.Size = new System.Drawing.Size(133, 35);
             this.Txtcod_convenio.TabIndex = 31;
             this.Txtcod_convenio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Txtcod_convenio.TextChanged += new System.EventHandler(this.Txtcod_convenio_TextChanged);
@@ -121,34 +122,34 @@
             this.dgvDatos.AllowUserToAddRows = false;
             this.dgvDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvDatos.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(101)))), ((int)(((byte)(124)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(101)))), ((int)(((byte)(124)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDatos.EnableHeadersVisualStyles = false;
             this.dgvDatos.Location = new System.Drawing.Point(15, 82);
             this.dgvDatos.Name = "dgvDatos";
-            this.dgvDatos.ReadOnly = true;
             this.dgvDatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvDatos.RowHeadersVisible = false;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvDatos.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvDatos.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvDatos.Size = new System.Drawing.Size(908, 244);
             this.dgvDatos.TabIndex = 253;
             // 
@@ -191,28 +192,17 @@
             this.TxtAsunto.Location = new System.Drawing.Point(556, 28);
             this.TxtAsunto.Multiline = true;
             this.TxtAsunto.Name = "TxtAsunto";
-            this.TxtAsunto.Size = new System.Drawing.Size(367, 28);
+            this.TxtAsunto.Size = new System.Drawing.Size(520, 35);
             this.TxtAsunto.TabIndex = 257;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(84)))));
-            this.label4.Location = new System.Drawing.Point(12, 60);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 16);
-            this.label4.TabIndex = 259;
-            this.label4.Text = "Datos";
             // 
             // Btnbuscar
             // 
             this.Btnbuscar.BackColor = System.Drawing.SystemColors.Window;
             this.Btnbuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btnbuscar.Image = global::Usuarios_planta.Properties.Resources.search_26px;
-            this.Btnbuscar.Location = new System.Drawing.Point(123, 28);
+            this.Btnbuscar.Location = new System.Drawing.Point(118, 28);
             this.Btnbuscar.Name = "Btnbuscar";
-            this.Btnbuscar.Size = new System.Drawing.Size(23, 26);
+            this.Btnbuscar.Size = new System.Drawing.Size(28, 32);
             this.Btnbuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Btnbuscar.TabIndex = 32;
             this.Btnbuscar.TabStop = false;
@@ -246,11 +236,11 @@
             // 
             this.dtpHora_Envio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpHora_Envio.CustomFormat = "HH:mm";
-            this.dtpHora_Envio.Font = new System.Drawing.Font("Segoe UI Emoji", 11.25F);
+            this.dtpHora_Envio.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpHora_Envio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpHora_Envio.Location = new System.Drawing.Point(170, 28);
             this.dtpHora_Envio.Name = "dtpHora_Envio";
-            this.dtpHora_Envio.Size = new System.Drawing.Size(109, 27);
+            this.dtpHora_Envio.Size = new System.Drawing.Size(109, 33);
             this.dtpHora_Envio.TabIndex = 266;
             // 
             // label34
@@ -301,15 +291,15 @@
             this.btnDescargar_Excel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDescargar_Excel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDescargar_Excel.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnDescargar_Excel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDescargar_Excel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.btnDescargar_Excel.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnDescargar_Excel.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
             this.btnDescargar_Excel.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnDescargar_Excel.IconSize = 25;
-            this.btnDescargar_Excel.Location = new System.Drawing.Point(938, 82);
+            this.btnDescargar_Excel.IconSize = 22;
+            this.btnDescargar_Excel.Location = new System.Drawing.Point(933, 82);
             this.btnDescargar_Excel.Name = "btnDescargar_Excel";
             this.btnDescargar_Excel.Rotation = 0D;
-            this.btnDescargar_Excel.Size = new System.Drawing.Size(137, 52);
+            this.btnDescargar_Excel.Size = new System.Drawing.Size(143, 38);
             this.btnDescargar_Excel.TabIndex = 274;
             this.btnDescargar_Excel.Text = "Exp. Excel";
             this.btnDescargar_Excel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -322,15 +312,15 @@
             this.btnEnviar_Correo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEnviar_Correo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnviar_Correo.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnEnviar_Correo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviar_Correo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.btnEnviar_Correo.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnEnviar_Correo.IconChar = FontAwesome.Sharp.IconChar.MailBulk;
             this.btnEnviar_Correo.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnEnviar_Correo.IconSize = 25;
-            this.btnEnviar_Correo.Location = new System.Drawing.Point(938, 172);
+            this.btnEnviar_Correo.IconSize = 22;
+            this.btnEnviar_Correo.Location = new System.Drawing.Point(933, 147);
             this.btnEnviar_Correo.Name = "btnEnviar_Correo";
             this.btnEnviar_Correo.Rotation = 0D;
-            this.btnEnviar_Correo.Size = new System.Drawing.Size(137, 52);
+            this.btnEnviar_Correo.Size = new System.Drawing.Size(143, 38);
             this.btnEnviar_Correo.TabIndex = 276;
             this.btnEnviar_Correo.Text = "Enviar Correo";
             this.btnEnviar_Correo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -349,7 +339,6 @@
             this.panel4.Controls.Add(this.Btnbuscar);
             this.panel4.Controls.Add(this.btnDescargar_Excel);
             this.panel4.Controls.Add(this.dgvDatos);
-            this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.Txtcod_convenio);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.label34);
@@ -359,6 +348,27 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1086, 341);
             this.panel4.TabIndex = 277;
+            // 
+            // Btn_Actualizadb
+            // 
+            this.Btn_Actualizadb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(84)))));
+            this.Btn_Actualizadb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Actualizadb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Actualizadb.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.Btn_Actualizadb.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Actualizadb.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Btn_Actualizadb.IconChar = FontAwesome.Sharp.IconChar.MailBulk;
+            this.Btn_Actualizadb.IconColor = System.Drawing.Color.Gainsboro;
+            this.Btn_Actualizadb.IconSize = 22;
+            this.Btn_Actualizadb.Location = new System.Drawing.Point(933, 214);
+            this.Btn_Actualizadb.Name = "Btn_Actualizadb";
+            this.Btn_Actualizadb.Rotation = 0D;
+            this.Btn_Actualizadb.Size = new System.Drawing.Size(143, 38);
+            this.Btn_Actualizadb.TabIndex = 282;
+            this.Btn_Actualizadb.Text = "Actualizar Base";
+            this.Btn_Actualizadb.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Btn_Actualizadb.UseVisualStyleBackColor = false;
+            this.Btn_Actualizadb.Click += new System.EventHandler(this.Btn_Actualizadb_Click);
             // 
             // label8
             // 
@@ -389,7 +399,7 @@
             this.TxtNombre_Archivo.Location = new System.Drawing.Point(303, 29);
             this.TxtNombre_Archivo.Multiline = true;
             this.TxtNombre_Archivo.Name = "TxtNombre_Archivo";
-            this.TxtNombre_Archivo.Size = new System.Drawing.Size(210, 28);
+            this.TxtNombre_Archivo.Size = new System.Drawing.Size(247, 35);
             this.TxtNombre_Archivo.TabIndex = 279;
             this.TxtNombre_Archivo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -436,26 +446,28 @@
             this.dtpfecha.Size = new System.Drawing.Size(114, 27);
             this.dtpfecha.TabIndex = 279;
             // 
-            // Btn_Actualizadb
+            // label3
             // 
-            this.Btn_Actualizadb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(84)))));
-            this.Btn_Actualizadb.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Actualizadb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Actualizadb.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.Btn_Actualizadb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Actualizadb.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Btn_Actualizadb.IconChar = FontAwesome.Sharp.IconChar.MailBulk;
-            this.Btn_Actualizadb.IconColor = System.Drawing.Color.Gainsboro;
-            this.Btn_Actualizadb.IconSize = 25;
-            this.Btn_Actualizadb.Location = new System.Drawing.Point(938, 274);
-            this.Btn_Actualizadb.Name = "Btn_Actualizadb";
-            this.Btn_Actualizadb.Rotation = 0D;
-            this.Btn_Actualizadb.Size = new System.Drawing.Size(137, 52);
-            this.Btn_Actualizadb.TabIndex = 282;
-            this.Btn_Actualizadb.Text = "Actualizar Base";
-            this.Btn_Actualizadb.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Btn_Actualizadb.UseVisualStyleBackColor = false;
-            this.Btn_Actualizadb.Click += new System.EventHandler(this.Btn_Actualizadb_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(84)))));
+            this.label3.Location = new System.Drawing.Point(690, 424);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 16);
+            this.label3.TabIndex = 282;
+            this.label3.Text = "Copia Correo";
+            // 
+            // TtxCopia_correo
+            // 
+            this.TtxCopia_correo.BackColor = System.Drawing.SystemColors.Window;
+            this.TtxCopia_correo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TtxCopia_correo.Location = new System.Drawing.Point(692, 443);
+            this.TtxCopia_correo.Multiline = true;
+            this.TtxCopia_correo.Name = "TtxCopia_correo";
+            this.TtxCopia_correo.Size = new System.Drawing.Size(418, 79);
+            this.TtxCopia_correo.TabIndex = 281;
+            this.TtxCopia_correo.Text = "oscar.mesa@bbva.com.co; vobopagadorcf@bbva.com.co ; controldecambiosfabrica.co@bb" +
+    "va.com ; s&c-bbva@bbva.com.co";
             // 
             // FormEnvio_Correos
             // 
@@ -463,6 +475,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1370, 560);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.TtxCopia_correo);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dtpfecha);
             this.Controls.Add(this.btnVer_pte_Correos);
@@ -505,7 +519,6 @@
         private System.Windows.Forms.TextBox TxtDestinatario_Correo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TxtAsunto;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
@@ -524,5 +537,7 @@
         private System.Windows.Forms.DateTimePicker dtpfecha;
         private System.Windows.Forms.Label label8;
         private FontAwesome.Sharp.IconButton Btn_Actualizadb;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox TtxCopia_correo;
     }
 }

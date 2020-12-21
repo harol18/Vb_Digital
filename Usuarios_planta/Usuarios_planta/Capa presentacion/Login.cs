@@ -16,8 +16,7 @@ namespace Usuarios_planta.Capa_presentacion
 {
     public partial class Login : Form
     {
-        MySqlConnection con = new MySqlConnection("server=82.2.121.99;Uid=userapp;password=userapp;database=dblibranza;port=3306;persistsecurityinfo=True;");
-
+       MySqlConnection con = new MySqlConnection("server=;Uid=;password=;database=dblibranza;port=3306;persistsecurityinfo=True;");
 
         public Login()
         {
@@ -73,6 +72,15 @@ namespace Usuarios_planta.Capa_presentacion
         private void button1_Click(object sender, EventArgs e)
         {
             loguear(Txtusuario.Text, Txtcontraseña.Text);
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            //Como ocultar el contenido de un textbox como si fuera una contraseña
+            if (Txtcontraseña.UseSystemPasswordChar == false)
+                Txtcontraseña.UseSystemPasswordChar = true;
+            else
+                Txtcontraseña.UseSystemPasswordChar = false;
         }
     }
 }

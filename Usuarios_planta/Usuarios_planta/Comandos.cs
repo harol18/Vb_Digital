@@ -15,7 +15,8 @@ namespace Usuarios_planta
 {
     class Comandos
     {
-        MySqlConnection con = new MySqlConnection("server=82.2.121.99;Uid=userapp;password=userapp;database=dblibranza;port=3306;persistsecurityinfo=True;");
+        //MySqlConnection con = new MySqlConnection("server=82.2.121.99;Uid=userapp;password=userapp;database=dblibranza;port=3306;persistsecurityinfo=True;");
+        MySqlConnection con = new MySqlConnection("server=localhost;Uid=root;password=Indr42020$;database=dblibranza;port=3306;persistsecurityinfo=True;");
 
         public void Guardar_vobo(TextBox TxtRadicado, TextBox TxtCedula_Cliente, TextBox TxtNombre_Cliente, TextBox TxtScoring, ComboBox cmbFuerza_Venta, TextBox TxtCodigo_Convenio,ComboBox cmbDirigido, TextBox TxtCod_Matriz, TextBox TxtConsecutivo, 
                                  ComboBox cmbGrado, TextBox TxtCod_Militar1, TextBox TxtCod_Militar2, ComboBox cmbDestino, TextBox TxtSubproducto, TextBox TxtTasa_E_A, TextBox TxtTasa_N_M, 
